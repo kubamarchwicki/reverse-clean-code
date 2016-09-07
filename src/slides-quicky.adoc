@@ -1,0 +1,319 @@
+= Reverse engineering the clean code
+Jakub Marchwicki <@kubem>
+:idprefix: sslide_
+:title-slide-background-image: code-example.jpg
+:title-slide-background-size: cover
+:icons: font
+:imagesdir: images
+:figure-caption!:
+//:revealjsdir: /home/kubam/workspaces/asciidoctor/reveal.js
+:revealjs_center: true
+:revealjs_theme: poang
+:revealjs_transition: none
+:revealjs_progress: false
+:revealjs_history: true
+:revealjs_controls: false
+:revealjs_customtheme: css/poang.css
+:revealjs_width: 1920
+:revealjs_height: 1080
+:source-highlighter: coderay
+
+== Not only the clean code
+
+[NOTE.speaker]
+--
+* This is a talk I've given on GeeCON 2014 and couple of other times
+* but this isn't the same talk
+--
+
+[#aboutme%notitle]
+== Shameless plug
+
+....
+Jakub Marchwicki
+  Twitter: <@kubem>
+  Email: jakub@marchwicki.pl
+
+Coder, trainer, speaker
+  http://jakub.marchwicki.pl
+  Yes, we can work together!
+
+GeeCON Reactive
+  9th September 2016 in Sopot
+
+GeeCON by the beach
+....
+
+
+[%notitle]
+== Uncle bob
+
+image::http://programmer.97things.oreilly.com/wiki/images/8/82/UncleBob.jpg[background, size=cover]
+
+[NOTE.speaker]
+--
+* journey to mastery
+* you come across this guy
+--
+
+[%notitle, background-color="#fff"]
+== Comments
+
+image::05-comments.png[background, size=contain, repeat=no-repeat]
+
+[%notitle, background-color="#fff"]
+== Comments day after
+
+image::06-comments-woohoo.png[background, size=contain, repeat=no-repeat]
+
+
+[%notitle]
+== Kent Beck
+
+image::11-kent-beck.jpg[background, size=cover]
+
+[NOTE.speaker]
+--
+* Kent has given this different perspective on what was important
+** what the implementation was really about
+* Communication. Simplicity. Flexibility - as the values.
+* There are some principles
+--
+
+== What is SOLID really about?
+
+[NOTE.speaker]
+--
+* Kevlin Henney - SOLID deconstruction
+* It's all about *Single Responsibility* with *Listkov Substitution*
+** That gives us *Dependency Injection* for free
+** and DI is not really a principle
+--
+
+== If we give it a twist?
+
+[NOTE.speaker]
+--
+* If you've seen this talk already - that's the flow / part you might already know
+* With such great names talking about clean code, who am I to think I can do a better job?
+--
+
+== Psychology 101
+
+== Affordance
+
+[NOTE.speaker]
+--
+* last time I was talking about affordances
+--
+
+
+[%notitle]
+== Affordance
+
+[quote]
+____
+a *quality* of an *object*, which *allows* an individual *to perform an action*. For example, a knob affords twisting, and perhaps pushing, while a cord affords pulling
+____
+
+== !
+
+[source, java]
+----
+public class Sql {
+   public Sql(String table, Column[] columns);
+   public String create();
+   public String insert(Object[] fields);
+   public String selectAll();
+   public String fieldByKey(
+       String keyColumn, String keyValue);
+   private String ColumnList(Column[] columns);
+   private String valuesList(
+	     Object[] fields, final Column[] columns);
+}
+----
+
+== !
+
+[source, java]
+----
+abstract public class Sql {
+   public Sql(String table, Column[] columns);
+   abstract public String generate();
+}
+----
+
+[source, java]
+----
+public class CreateSql extends Sql {
+   public CreateSql(String table, Column[] columns);
+   @Override public String generate();
+}
+----
+
+[source, java]
+----
+public class SelectSql extends Sql {
+   public SelectSql(String table, Column[] columns);
+   @Override public String generate();
+}
+----
+
+[source, java]
+----
+public class InsertSql extends Sql {
+   public InsertSql(String table, Column[] columns);
+   @Override public String generate();
+   private String valuesList(Object[] fields, final Column[] columns);
+}
+----
+
+[NOTE.speaker]
+--
+* There are other psychology principles which we can drill down
+* Which determines how we work with things
+--
+
+== Psychology WAT?
+
+[%step]
+* Affordances
+* Accidental complexity
+* Confusion
+* Attention span
+* Short term memory
+* Multi-store memory model
+* SCARF framework
+* Flow
+
+== How memory works
+
+image::http://www.bbc.co.uk/staticarchive/9c484e9cc211fba2c2f9da03c330cd49ae5168bd.gif[width=1200]
+
+[NOTE.speaker]
+--
+* Sensor memory *miliseconds, loads of things*
+* Shortterm memmory *20seconds, until the next distractions, 7 plus/minus 2 things*
+* Longterm memory *learning starts*
+** Requires learning
+** Rehears
+* *Memory / disks example*
+--
+
+[%notitle]
+== Bad bad code
+
+[source, html]
+----
+<table border='0' width='100%' style="margin-top:15px;">
+<tr><td valign='top' width="200" align="center">
+
+<% byte[] encoded = null;
+String prac_pnr =(String)session.getAttribute("prac_pnr");
+if (prac_pnr ==null) prac_pnr ="";
+
+YdpPssClient client = new YdpPssClient();
+String logaid=prac_pnr;
+encoded = client.getUserFotoFromWServices("",logaid,"small");
+session.setAttribute("encoded",encoded);
+Manager.refresh(LAOSL1,(String)session.getAttribute("AKPN"));
+%>
+<%if(encoded!= null){%>
+  <IMG src="loadImgTh_02.jsp" border="0" id="test">
+<%}else{%>
+    <IMG height="177" src="pics/noImage.jpg" border="0" id="test">
+<%}%>
+----
+
+[NOTE.speaker]
+--
+* Convoluted code
+--
+
+[%notitle]
+== API design
+
+[%step]
+* Short, self explanatory names
+* Consistency - same thing means same things *everywhere*
+* Limited number of parameters, properly ordered
+
+== The principle of least astonishment
+
+== !
+
+* `java.sql.Statement`
+** `execute(String)`
+** `executeBatch()`
+** `executeQuery(String)`
+** `executeUpdate(String)`
+
+== !
+
+* Collections API
+** `size()`
+** `remove()`
+** `removeAll()`
+
+== !
+
+* `java.util.Observable`
+** `countObservers()`
+** `deleteObserver(Observer)`
+** `deleteObservers()`
+
+== !
+
+* `java.lang.String`
+** `regionMatches(int, String, int, int)`
+** `regionMatches(boolean, int, String, int, int)`
+
+[NOTE.speaker]
+--
+These are all things we need to learn!
+--
+
+== The cognitive limitations
+
+[NOTE.speaker]
+--
+* We hardly ever look at our code through coginitive capabilities
+** Limitations
+--
+
+[%notitle]
+== Norman's book
+
+image::21-design-of-everyday-things.jpg[background, size=canvas, repeat=no-repeat]
+
+[NOTE.speaker]
+--
+* So next time when you'll be looking for a book
+* Don't rush for another framework
+* Take a book from totaly differnent world
+--
+
+
+[%notitle]
+== Thank you!
+
+image::http://i.giphy.com/a3IWyhkEC0p32.gif[background, size=cover]
+
+
+[#aboutme%notitle]
+== Shameless plug
+
+....
+Jakub Marchwicki
+  Twitter: <@kubem>
+  Email: jakub@marchwicki.pl
+
+Coder, trainer, speaker
+  http://jakub.marchwicki.pl
+  Yes, we can work together!
+
+GeeCON Reactive
+  9th September 2016 in Sopot
+
+GeeCON by the beach
+....
