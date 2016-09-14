@@ -1,0 +1,270 @@
+= Reverse engineering the clean code
+Jakub Marchwicki <@kubem>
+:idprefix: sslide_
+:title-slide-background-image: https://i.ytimg.com/vi/7UaPL5PGywo/maxresdefault.jpg
+:title-slide-background-size: cover
+:icons: font
+:imagesdir: images
+:figure-caption!:
+//:revealjsdir: /home/kubam/workspaces/asciidoctor/reveal.js
+:revealjs_center: true
+:revealjs_theme: poang
+:revealjs_transition: none
+:revealjs_progress: false
+:revealjs_history: true
+:revealjs_controls: false
+:revealjs_customtheme: css/poang.css
+:revealjs_width: 1440
+:revealjs_height: 960
+:source-highlighter: coderay
+
+== Reverse engineering
+
+[quote, Wikipedia, https://en.wikipedia.org/wiki/Reverse_engineering]
+(also called back engineering), is the processes of extracting knowledge or design information from anything man-made and re-producing it or re-producing anything based on the extracted information.
+
+== Clean code
+
+[quote, Stackoverflow, http://stackoverflow.com/a/954626/330070]
+Code which reads as close to a human language as possible. I mean it on all the levels: from syntax used, naming convention and alignment all the way to algorithms used, quality of comments and complexity of distribution of code between modules.
+
+== Do I really gonna go like this?
+
+image::https://media.giphy.com/media/10zHDq77BLwcy4/giphy.gif[background]
+
+== I'll tell you a story...
+
+== ... about bad bad code we've all seen
+
+== !
+
+[source, html]
+----
+<table border='0' width='100%' style="margin-top:15px;">
+<tr><td valign='top' width="200" align="center">
+
+<% byte[] encoded = null;
+String prac_pnr =(String)session.getAttribute("prac_pnr");
+if (prac_pnr ==null) prac_pnr ="";
+
+YdpPssClient client = new YdpPssClient();
+String logaid=prac_pnr;
+encoded = client.getUserFotoFromWServices("",logaid,"small");
+session.setAttribute("encoded",encoded);
+Manager.refresh(LAOSL1,(String)session.getAttribute("AKPN"));
+%>
+<%if(encoded!= null){%>
+  <IMG src="loadImgTh_02.jsp" border="0" id="test">
+<%}else{%>
+    <IMG height="177" src="pics/noImage.jpg" border="0" id="test">
+<%}%>
+----
+
+[NOTE.speaker]
+====
+This particular is
+
+* *from* an HR system (custom built)
+* *communicating* with project portfolio management system (in house built)
+* *via* SOAP webservice communication
+** In like 20 different places over various JSP files
+** Out of 2600 JSP files in total
+** 700k lines of code of JSP files
+====
+
+== Oh no!
+
+image::https://media.giphy.com/media/CM1rHbKDMH2BW/giphy.gif[background]
+
+[NOTE.speaker]
+====
+This is scarry
+====
+
+== !
+
+image::07-clean-code.jpg[background, size=contain]
+
+== !
+
+image::11a-implementation-patterns.jpg[background, size=contain]
+
+[NOTE.speaker]
+====
+But we have clean code books for the rescue
+
+* Not everybody read it, but we did
+* Now we can get a bit bossy
+====
+
+== So it's sorted!
+
+image::sorted.gif[background]
+
+== Let's recap what is clean code?
+
+image::https://media.giphy.com/media/gJSJgg6wE32JG/giphy.gif[background]
+
+== Clean code is about...
+
+[%notitle, role="no-shadow"]
+== .. not doing like this
+
+image::05-comments.png[]
+
+[NOTE.speaker]
+====
+In essence:
+* Not doing like this
+====
+
+[%notitle, role="no-shadow"]
+== .. put any meme here
+
+image::05-comments-any.png[]
+
+
+[%notitle, role="no-shadow"]
+== .. to feel like this
+
+image::06-comments-woohoo.png[]
+
+[NOTE.speaker]
+====
+* Not to feel like this... after a few week
+
+{zwsp}
+
+* we obviously see advantages of clean code, why it works
+** it allows us to work better, faster
+** communicate more efficently
+* Kent has given this different perspective on what was important
+** Communication. Simplicity. Flexibility
+====
+
+== ... completely different perspective
+
+image::https://media.giphy.com/media/2rqEdFfkMzXmo/giphy.gif[background]
+
+[NOTE.speaker]
+====
+* but through out this session I'll take a different perspective
+* we will have a look into some good code and some bad
+** and think how our brains works with that
+** is there any psychology behind it?
+====
+
+
+[#aboutme, role="no-shadow"]
+== Who am I?
+
+....
+Jakub Marchwicki
+  Twitter: <@kubem>
+  Email: jakub@marchwicki.pl
+
+Coder, trainer, speaker
+Past life: management, architecture
+  http://jakub.marchwicki.pl
+  Yes, we can work together!
+
+I love crossing borders
+  Those between IT and any other industry
+....
+
+[NOTE.speaker]
+====
+Yes - I've done UX as well. Of voice recognition and dialogue systems. Eat this ;-)
+
+* We will work in a certain order
+** example
+** problem
+** solution
+** and some brainiac discussion
+====
+
+include::sections/affordances.adoc[]
+
+include::sections/short-term-memory.adoc[]
+
+include::sections/memory-model.adoc[]
+
+== Where does it all go?
+
+== The cognitive limitations
+
+[NOTE.speaker]
+====
+* We hardly ever look at our code through coginitive capabilities
+** Limitations
+====
+
+== Psychology WAT?
+
+[%step]
+* icon:check-square-o[] {zwsp} Affordances
+* icon:check-square-o[] {zwsp} Short term memory
+* icon:check-square-o[] {zwsp} Multi-store memory model
+* icon:square-o[] {zwsp} {zwsp} Accidental complexity
+* icon:square-o[] {zwsp} {zwsp} Attention span
+* icon:square-o[] {zwsp} {zwsp} Nielsen and Krug Heuristics _(from UX)_
+* icon:square-o[] {zwsp} {zwsp} Flow
+//* icon:square-o[] {zwsp} {zwsp} SCARF _(Status, Certainty, Autonomy, Relatedness, Fairness)_ model
+
+[NOTE.speaker]
+====
+Beyond just the clean code
+
+{zwsp}
+
+Nielsen / Krug::
+* big mistakes cover the smaller ones
+Flow::
+* fully immersed
+SCRAF::
+* more social interaction between team members
+
+====
+
+
+[%notitle]
+== Norman's book
+
+image::21-design-of-everyday-things.jpg[background, size=contain]
+
+[NOTE.speaker]
+--
+* So next time when you'll be looking for a book
+* Don't rush for another framework
+* Take a book from totaly differnent world
+--
+
+== Questions?
+
+image::https://media.giphy.com/media/YttkaW0vdUCC4/giphy.gif[background, size=contain]
+
+== Thank you!
+
+image::https://media.giphy.com/media/mbpaehNenYdSE/giphy.gif[background, size=contain]
+
+
+== Links and other goodies
+
+----
+
+
+PDF slides:
+  https://speakerdeck.com/kubamarchwicki/reverse-engineering-the-clean-code
+
+
+Follow me on twitter
+  @kubem
+  Email: jakub@marchwicki.pl
+  http://jakub.marchwicki.pl
+
+
+This presentation was made with Asciidoc & AsciiDoctor
+  http://asciidoctor.org/
+  https://github.com/kubamarchwicki/reverse-clean-code
+
+----

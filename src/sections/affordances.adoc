@@ -1,0 +1,178 @@
+== Example #{counter:example}
+
+[source, java]
+----
+public class Sql {
+   public Sql(String table, Column[] columns);
+   public String create();
+   public String insert(Object[] fields);
+   public String selectAll();
+   public String fieldByKey(
+       String keyColumn, String keyValue);
+   private String columnList(Column[] columns);
+   private String valuesList(
+	     Object[] fields, final Column[] columns);
+}
+----
+
+[NOTE.speaker]
+====
+What's wrong with this code
+
+* Very very bad, leaky abstraction over SQL
+** You've seen it in you code.. note one
+* No single responsibility
+** requires modifications to extend with additional functionality
+====
+
+[%notitle]
+== We can do it better
+
+[source, java]
+----
+abstract public class Sql {
+   public Sql(String table, Column[] columns);
+   abstract public String generate();
+}
+----
+
+[source, java]
+----
+public class CreateSql extends Sql {
+   public CreateSql(String table, Column[] columns);
+   @Override public String generate();
+}
+----
+
+[source, java]
+----
+public class SelectSql extends Sql {
+   public SelectSql(String table, Column[] columns);
+   @Override public String generate();
+}
+----
+
+[source, java]
+----
+public class InsertSql extends Sql {
+   public InsertSql(String table, Column[] columns);
+   @Override public String generate();
+   private String valuesList(Object[] fields, final Column[] columns);
+}
+----
+
+[NOTE.speaker]
+====
+How these to differ when we see them
+
+* First is commit (or better - ask mate to commit) and run
+* Second actually tells us where to make changes
+====
+
+== Why's that?
+
+[NOTE.speaker]
+====
+Let me explain
+====
+
+
+== Affordance
+
+[quote]
+a *quality* of an *object*, which *allows* an individual *to perform an action*. For example, a knob affords twisting, and perhaps pushing, while a cord affords pulling
+
+== Affordance for dummies
+
+image::21-affordance.jpg[background]
+
+[NOTE.speaker]
+====
+* This plate,this knob suggest an action
+** These suggestions are called signifiers
+====
+
+[%notitle]
+== Or even simpler
+
+image::20-pudelko.jpg[background, size=contain]
+
+[NOTE.speaker]
+====
+* We see a box and we build a mental model around that, in our mind.
+* Take this box
+** We can lift it, shake it, open, look inside, put something inside
+====
+
+== Affordances everywhere
+
+[NOTE.speaker]
+====
+When done wrong - brings confusion
+====
+
+== Yedi doors
+
+image::22-drzwi-jedi.png[background]
+
+== Your Android phone
+
+image::24-android1a.png[background]
+
+[NOTE.speaker]
+====
+* Not only among phisical objects, also in IT
+** See Android. It's after all fairly easy to bash about
+* See this box. It has slider, which suggests an action.
+** But at the same time it's a button. WTF??
+====
+
+
+== Your Android phone
+
+image::24-android2a.png[background]
+
+== Back to code
+
+
+[source, java]
+----
+abstract public class Sql {
+   public Sql(String table, Column[] columns);
+   abstract public String generate();
+}
+----
+
+[source, java]
+----
+public class CreateSql extends Sql {
+   public CreateSql(String table, Column[] columns);
+   @Override public String generate();
+}
+----
+
+[source, java]
+----
+public class SelectSql extends Sql {
+   public SelectSql(String table, Column[] columns);
+   @Override public String generate();
+}
+----
+
+[source, java]
+----
+public class InsertSql extends Sql {
+   public InsertSql(String table, Column[] columns);
+   @Override public String generate();
+   private String valuesList(Object[] fields, final Column[] columns);
+}
+----
+
+[NOTE.speaker]
+====
+Now take this example
+
+* mental model: what model you build when you see this code
+* affordance: what actions does this code allow you to do
+* signifiers: what it suggests, what are the next steps
+====

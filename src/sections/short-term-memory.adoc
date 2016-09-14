@@ -1,0 +1,49 @@
+== Example #{counter:example}
+
+* `java.util.Observable`
+** `countObservers()`
+** `deleteObserver(Observer)`
+** `deleteObservers()`
+
+[NOTE.speaker]
+====
+Java `Observable` implementation
+
+* Doesn't look bad. However, when we think what it does...
+* It operates on a collection of elements, collection of Observers
+** WOW collection - let's look at collections
+====
+
+== !
+
+* Collections API
+** `size()`
+** `remove()`
+** `removeAll()`
+
+[NOTE.speaker]
+====
+So why on Earth `Observable` couldn't have size etc?
+
+* How could we've solved it?
+====
+
+== API design
+
+[%step]
+* Short, self explanatory names
+* Consistency - same thing means same things *everywhere*
+* Limited number of parameters, properly ordered
+
+== Principles of least astonishment
+
+* Short, self explanatory names
+* Consistency - same thing means same things *everywhere*
+* Limited number of parameters, properly ordered
+
+[NOTE.speaker]
+====
+We don't our users to feel ashamed they don't remember something
+====
+
+//TODO short term memory explanation - z artykułu

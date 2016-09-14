@@ -60,13 +60,14 @@ body {
 .reveal .slides > section[data-background-image].has-light-background h2 {
   background: rgba(0,0,0, 0.5);
   padding: 30px;
+  margin-top: 700px;
 }
 
 .reveal .slides > section[data-background-image] h2 {
   background: rgba(255, 255, 255, 0.5);
   padding: 30px;
+  margin-top: 700px;
 }
-
 
 .reveal h2,
 .reveal h3,
@@ -74,7 +75,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #333;
+  color: #BA3925; /* #333; */
   font-family: 'Lato', sans-serif;
   /*font-weight: 900;*/
   line-height: 1.2;
@@ -86,7 +87,7 @@ body {
 
 /* voxxed days slides variation */
 .reveal h1 {
-  margin: 600px 0px 0px 500px;
+  margin: 400px 0px 0px 450px;
   color: black;
   font-family: 'Lato', sans-serif;
   font-weight: 900;
@@ -344,6 +345,10 @@ body {
 .reveal .roll span:after {
   color: #fff;
   background: #0d9ba5;
+}
+
+.reveal section.no-shadow * {
+    box-shadow: 0 0 0;
 }
 
 .reveal section img {

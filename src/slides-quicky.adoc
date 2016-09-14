@@ -14,8 +14,8 @@ Jakub Marchwicki <@kubem>
 :revealjs_history: true
 :revealjs_controls: false
 :revealjs_customtheme: css/poang.css
-:revealjs_width: 1920
-:revealjs_height: 1080
+:revealjs_width: 1440
+:revealjs_height: 960
 :source-highlighter: coderay
 
 == Not only the clean code
@@ -193,7 +193,7 @@ image::http://www.bbc.co.uk/staticarchive/9c484e9cc211fba2c2f9da03c330cd49ae5168
 [NOTE.speaker]
 --
 * Sensor memory *miliseconds, loads of things*
-* Shortterm memmory *20seconds, until the next distractions, 7 plus/minus 2 things*
+* Short term memmory *20seconds, until the next distractions, 7 plus/minus 2 things*
 * Longterm memory *learning starts*
 ** Requires learning
 ** Rehears

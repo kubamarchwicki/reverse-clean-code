@@ -1,0 +1,52 @@
+== Example #{counter:example}
+
+* `java.lang.String`
+** `regionMatches(int, String, int, int)`
+** `regionMatches(boolean, int, String, int, int)`
+
+[NOTE.speaker]
+====
+* What does first argument does?
+* What's the difference between 2nd and 3rd integer?
+** `boolean` is case sensitivity
+** 2nd is offset of other string
+** 3rd is length
+====
+
+== !
+
+* `java.sql.Statement`
+** `execute(String)`
+** `executeBatch()`
+** `executeQuery(String)`
+** `executeUpdate(String)`
+
+
+// TODO: memory model
+
+
+
+== !
+
+* `java.lang.String`
+** `regionMatches(int, String, int, int)`
+** `regionMatchesCaseInsensitive(int, String, int, int)`
+
+[NOTE.speaker]
+====
+Much less to learn
+====
+
+== Why learning is hard?
+
+image::http://www.bbc.co.uk/staticarchive/9c484e9cc211fba2c2f9da03c330cd49ae5168bd.gif[width=1200]
+
+[NOTE.speaker]
+====
+* Sensor memory *miliseconds, loads of things*
+* Short term memmory *20seconds, until the next distractions, 7 plus/minus 2 things*
+* Longterm memory *learning starts*
+** Requires learning
+** Rehears
+* *Memory / disks example*
+====
