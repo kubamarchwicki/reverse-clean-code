@@ -35,6 +35,52 @@ So why on Earth `Observable` couldn't have size etc?
 * Consistency - same thing means same things *everywhere*
 * Limited number of parameters, properly ordered
 
+== Psychology WAT?
+
+== The Magical Number Seven
+
+[quote, George Miller]
+____
+(...) span of immediate memory impose severe limitations on the amount of information that we are able to receive, process, and remember. By organizing the stimulus input simultaneously into several dimensions and successively into a sequence of chunks, we manage to break (or at least stretch) this informational bottleneck.
+Some Limits on our Capacity for Processing Information
+____
+
+[NOTE.speaker]
+====
+"Plus or Minus Two"
+
+Famous paper from 1956
+
+* immediate memory (or working memory - which might be a more natural term) imposes several limitations on the amount of information people are able to receive, process and remember.
+* seven or five, or any other number - it is disputable and research dependent
+** maybe we cannot measure it at all or there is only three
+
+{zwsp}
+
+*Reminds of something?*
+====
+
+[background-color="white"]
+== !
+
+image::32-clean-code-functions-chapter3.png[background, size=contain]
+
+[NOTE.speaker]
+====
+*Properly structured information (through separate concepts), in a bite size portions (small entities) - that is exactly what the 'Functions' chapter of the clean code book was about*
+====
+
+
+== !
+
+image::31-rosyjskie_liczydlo.jpg[width=800]
+
+[NOTE.speaker]
+====
+This has been known ever since - like in this classic example
+====
+
+
 == Principles of least astonishment
 
 * Short, self explanatory names
@@ -44,6 +90,8 @@ So why on Earth `Observable` couldn't have size etc?
 [NOTE.speaker]
 ====
 We don't our users to feel ashamed they don't remember something
-====
 
-//TODO short term memory explanation - z artykułu
+First two we've seen.
+
+The last one leads us to the next example
+====

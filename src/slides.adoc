@@ -81,13 +81,13 @@ image::https://media.giphy.com/media/CM1rHbKDMH2BW/giphy.gif[background]
 This is scarry
 ====
 
-== !
+== The Clean Code
 
-image::07-clean-code.jpg[background, size=contain]
+image::07-clean-code-v2.jpg[background]
 
-== !
+== Implementation Patterns
 
-image::11a-implementation-patterns.jpg[background, size=contain]
+image::11a-implementation-patterns-v2.jpg[background]
 
 [NOTE.speaker]
 ====
@@ -175,6 +175,20 @@ I love crossing borders
 [NOTE.speaker]
 ====
 Yes - I've done UX as well. Of voice recognition and dialogue systems. Eat this ;-)
+====
+
+== Kittens move away!
+
+image::https://media.giphy.com/media/ZnDQ6rL0wr9Ha/giphy.gif[background]
+
+[role="no-shadow"]
+== Agenda
+
+image::http://2.bp.blogspot.com/_vVBx0vyQqUM/SASD__1sCmI/AAAAAAAAAFY/4uSzFjBkqfI/s400/ooda_loop_dumbed_down.png[width=700]
+
+[NOTE.speaker]
+====
+OODA Loop - because it's good for everything. And we are agile, don't we
 
 * We will work in a certain order
 ** example
@@ -182,6 +196,10 @@ Yes - I've done UX as well. Of voice recognition and dialogue systems. Eat this 
 ** solution
 ** and some brainiac discussion
 ====
+
+//TODO: Belgrade - default parameters
+//this shows how much UX heuristics (have default values) have much in common
+//with programming
 
 include::sections/affordances.adoc[]
 
@@ -230,7 +248,7 @@ SCRAF::
 [%notitle]
 == Norman's book
 
-image::21-design-of-everyday-things.jpg[background, size=contain]
+image::21-design-of-everyday-things-v2.jpg[background]
 
 [NOTE.speaker]
 --

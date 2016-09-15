@@ -6,6 +6,8 @@
 
 [NOTE.speaker]
 ====
+Function compares two substring.
+
 * What does first argument does?
 * What's the difference between 2nd and 3rd integer?
 ** `boolean` is case sensitivity
@@ -21,9 +23,10 @@
 ** `executeQuery(String)`
 ** `executeUpdate(String)`
 
-
-// TODO: memory model
-
+[NOTE.speaker]
+====
+At the same time we have nicely crafted `Statement` API
+====
 
 
 == !
@@ -32,17 +35,75 @@
 ** `regionMatches(int, String, int, int)`
 ** `regionMatchesCaseInsensitive(int, String, int, int)`
 
+== !
+
+[source, java]
+----
+
+boolean match = String.regionMatches()
+    .offset(int)
+    .withOther(String)
+        .offset(int)
+    .length(int)
+    .matches();
+
+----
+
+== !
+
+[source, java]
+----
+final String foo = /*some string*/;
+final String bar = /*some other string*/;
+
+final boolean match = foo.regionMatches(true, 5, bar, 9, 10);
+----
+
+*vs*
+
+[source, java]
+----
+final String foo = /*some string*/;
+final String bar = /*some other string*/;
+
+final boolean match = foo.regionMatches()
+    .caseInsensitive()
+    .offset(5)
+    .withOther(bar)
+        .offset(9)
+    .length(10)
+    .matches();
+----
+
 [NOTE.speaker]
 ====
-Much less to learn
+Now compare those two together. Which seem easier to use?
 ====
+
+== Psychology WAT?
 
 == Why learning is hard?
 
-image::http://www.bbc.co.uk/staticarchive/9c484e9cc211fba2c2f9da03c330cd49ae5168bd.gif[width=1200]
+[NOTE.speaker]
+====
+* First example needs to be memorized
+* Second - walks us through the API
+
+{zwsp}
+
+* made of a series of stores
+* can be described in terms the information flow through the system
+====
+
+[role="no-shadow"]
+== Memory model
+
+image::multistore-memory-model.png[]
 
 [NOTE.speaker]
 ====
+Proposed by Richard Atkinson and Richard Shiffrin
+
 * Sensor memory *miliseconds, loads of things*
 * Short term memmory *20seconds, until the next distractions, 7 plus/minus 2 things*
 * Longterm memory *learning starts*

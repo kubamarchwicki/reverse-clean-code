@@ -7,11 +7,9 @@ public class Sql {
    public String create();
    public String insert(Object[] fields);
    public String selectAll();
-   public String fieldByKey(
-       String keyColumn, String keyValue);
+   public String fieldByKey(String keyColumn, String keyValue);
    private String columnList(Column[] columns);
-   private String valuesList(
-	     Object[] fields, final Column[] columns);
+   private String valuesList(Object[] fields, final Column[] columns);
 }
 ----
 
@@ -69,7 +67,7 @@ How these to differ when we see them
 * Second actually tells us where to make changes
 ====
 
-== Why's that?
+== Psychology WAT?
 
 [NOTE.speaker]
 ====
@@ -92,7 +90,7 @@ image::21-affordance.jpg[background]
 ** These suggestions are called signifiers
 ====
 
-[%notitle]
+[%notitle, background-color="white"]
 == Or even simpler
 
 image::20-pudelko.jpg[background, size=contain]
