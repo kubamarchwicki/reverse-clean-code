@@ -1,5 +1,9 @@
 == Example #{counter:example}
 
+image::00-empty.png[background]
+
+=== !
+
 [source, java]
 ----
 public class Sql {
@@ -24,7 +28,7 @@ What's wrong with this code
 ====
 
 [%notitle]
-== We can do it better
+=== We can do it better
 
 [source, java]
 ----
@@ -67,7 +71,7 @@ How these to differ when we see them
 * Second actually tells us where to make changes
 ====
 
-== Psychology WAT?
+=== Psychology WAT?
 
 [NOTE.speaker]
 ====
@@ -75,12 +79,12 @@ Let me explain
 ====
 
 
-== Affordance
+=== Affordance
 
 [quote]
 a *quality* of an *object*, which *allows* an individual *to perform an action*. For example, a knob affords twisting, and perhaps pushing, while a cord affords pulling
 
-== Affordance for dummies
+=== Affordance for dummies
 
 image::21-affordance.jpg[background]
 
@@ -91,7 +95,7 @@ image::21-affordance.jpg[background]
 ====
 
 [%notitle, background-color="white"]
-== Or even simpler
+=== Or even simpler
 
 image::20-pudelko.jpg[background, size=contain]
 
@@ -102,18 +106,18 @@ image::20-pudelko.jpg[background, size=contain]
 ** We can lift it, shake it, open, look inside, put something inside
 ====
 
-== Affordances everywhere
+=== Affordances everywhere
 
 [NOTE.speaker]
 ====
 When done wrong - brings confusion
 ====
 
-== Yedi doors
+=== Yedi doors
 
 image::22-drzwi-jedi.png[background]
 
-== Your Android phone
+=== Your Android phone
 
 image::24-android1a.png[background]
 
@@ -126,12 +130,26 @@ image::24-android1a.png[background]
 ====
 
 
-== Your Android phone
+=== Your Android phone
 
 image::24-android2a.png[background]
 
-== Back to code
+=== Back to code
 
+[source, java]
+----
+public class Sql {
+   public Sql(String table, Column[] columns);
+   public String create();
+   public String insert(Object[] fields);
+   public String selectAll();
+   public String fieldByKey(String keyColumn, String keyValue);
+   private String columnList(Column[] columns);
+   private String valuesList(Object[] fields, final Column[] columns);
+}
+----
+
+*vs*
 
 [source, java]
 ----
@@ -157,14 +175,6 @@ public class SelectSql extends Sql {
 }
 ----
 
-[source, java]
-----
-public class InsertSql extends Sql {
-   public InsertSql(String table, Column[] columns);
-   @Override public String generate();
-   private String valuesList(Object[] fields, final Column[] columns);
-}
-----
 
 [NOTE.speaker]
 ====

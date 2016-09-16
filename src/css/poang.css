@@ -57,13 +57,15 @@ body {
   font-weight: inherit;
 }
 
-.reveal .slides > section[data-background-image].has-light-background h2 {
+.reveal .slides > section[data-background-image].has-light-background h2,
+.reveal .slides > section > section[data-background-image].has-light-background h2 {
   background: rgba(0,0,0, 0.5);
   padding: 30px;
   margin-top: 700px;
 }
 
-.reveal .slides > section[data-background-image] h2 {
+.reveal .slides > section[data-background-image] h2,
+.reveal .slides > section > section[data-background-image] h2 {
   color: #333;
   background: rgba(255, 255, 255, 0.5);
   padding: 30px;
@@ -91,7 +93,7 @@ body {
   margin: 400px 0px 0px 450px;
   color: black;
   font-family: 'Lato', sans-serif;
-  font-weight: 900;
+  font-weight: bold !important;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
@@ -102,7 +104,7 @@ body {
   font-weight: 300;
   /*text-transform: none;*/
   text-align: right;
-  background: rgba(255, 255,255, 0.5);
+  background: rgba(255, 255,255, 0.65);
   padding: 0.2em 0.5em 0.2em 0;
 }
 

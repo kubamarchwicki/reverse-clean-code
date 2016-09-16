@@ -1,5 +1,9 @@
 == Example #{counter:example}
 
+image::00-empty.png[background]
+
+=== !
+
 * `java.util.Observable`
 ** `countObservers()`
 ** `deleteObserver(Observer)`
@@ -14,12 +18,32 @@ Java `Observable` implementation
 ** WOW collection - let's look at collections
 ====
 
-== !
+=== !
 
 * Collections API
 ** `size()`
 ** `remove()`
 ** `removeAll()`
+
+=== Let's compare side by side
+
+[source]
+.java.util.Observable
+----
+countObservers()
+deleteObserver(Observer)
+deleteObservers()
+----
+
+*vs*
+
+[source]
+.Collections
+----
+size()
+remove()
+removeAll()
+----
 
 [NOTE.speaker]
 ====
@@ -28,16 +52,16 @@ So why on Earth `Observable` couldn't have size etc?
 * How could we've solved it?
 ====
 
-== API design
+=== API design
 
 [%step]
 * Short, self explanatory names
 * Consistency - same thing means same things *everywhere*
 * Limited number of parameters, properly ordered
 
-== Psychology WAT?
+=== Psychology WAT?
 
-== The Magical Number Seven
+=== The Magical Number Seven
 
 [quote, George Miller]
 ____
@@ -61,7 +85,7 @@ Famous paper from 1956
 ====
 
 [background-color="white"]
-== !
+=== !
 
 image::32-clean-code-functions-chapter3.png[background, size=contain]
 
@@ -71,7 +95,7 @@ image::32-clean-code-functions-chapter3.png[background, size=contain]
 ====
 
 
-== !
+=== !
 
 image::31-rosyjskie_liczydlo.jpg[width=800]
 
@@ -81,7 +105,7 @@ This has been known ever since - like in this classic example
 ====
 
 
-== Principles of least astonishment
+=== Principles of least astonishment
 
 * Short, self explanatory names
 * Consistency - same thing means same things *everywhere*

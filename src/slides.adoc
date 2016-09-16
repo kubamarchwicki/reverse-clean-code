@@ -1,4 +1,4 @@
-= Reverse engineering the clean code
+= Reverse engineering clean code
 Jakub Marchwicki <@kubem>
 :idprefix: sslide_
 :title-slide-background-image: https://i.ytimg.com/vi/7UaPL5PGywo/maxresdefault.jpg
@@ -79,6 +79,10 @@ image::https://media.giphy.com/media/CM1rHbKDMH2BW/giphy.gif[background]
 [NOTE.speaker]
 ====
 This is scarry
+
+* With projects like this you could've either:
+** run away
+** try to work with it - find your way
 ====
 
 == The Clean Code
@@ -115,6 +119,7 @@ image::05-comments.png[]
 [NOTE.speaker]
 ====
 In essence:
+
 * Not doing like this
 ====
 

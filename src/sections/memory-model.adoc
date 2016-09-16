@@ -1,5 +1,9 @@
 == Example #{counter:example}
 
+image::00-empty.png[background]
+
+=== !
+
 * `java.lang.String`
 ** `regionMatches(int, String, int, int)`
 ** `regionMatches(boolean, int, String, int, int)`
@@ -15,7 +19,7 @@ Function compares two substring.
 ** 3rd is length
 ====
 
-== !
+=== !
 
 * `java.sql.Statement`
 ** `execute(String)`
@@ -29,13 +33,13 @@ At the same time we have nicely crafted `Statement` API
 ====
 
 
-== !
+=== !
 
 * `java.lang.String`
 ** `regionMatches(int, String, int, int)`
 ** `regionMatchesCaseInsensitive(int, String, int, int)`
 
-== !
+=== !
 
 [source, java]
 ----
@@ -49,7 +53,7 @@ boolean match = String.regionMatches()
 
 ----
 
-== !
+=== !
 
 [source, java]
 ----
@@ -80,9 +84,9 @@ final boolean match = foo.regionMatches()
 Now compare those two together. Which seem easier to use?
 ====
 
-== Psychology WAT?
+=== Psychology WAT?
 
-== Why learning is hard?
+=== Learning is hard
 
 [NOTE.speaker]
 ====
@@ -91,12 +95,13 @@ Now compare those two together. Which seem easier to use?
 
 {zwsp}
 
+Memory::
 * made of a series of stores
 * can be described in terms the information flow through the system
 ====
 
 [role="no-shadow"]
-== Memory model
+=== Memory model
 
 image::multistore-memory-model.png[]
 
