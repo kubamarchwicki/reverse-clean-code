@@ -1,7 +1,5 @@
 == Example #{counter:example}
 
-image::00-empty.png[background]
-
 === !
 
 * `java.util.Observable`
