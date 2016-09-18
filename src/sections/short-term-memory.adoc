@@ -63,7 +63,7 @@ So why on Earth `Observable` couldn't have size etc?
 
 === The Magical Number Seven
 
-[quote, George Miller]
+[quote, George Miller (1956)]
 ____
 (...) span of immediate memory impose severe limitations on the amount of information that we are able to receive, process, and remember. By organizing the stimulus input simultaneously into several dimensions and successively into a sequence of chunks, we manage to break (or at least stretch) this informational bottleneck.
 Some Limits on our Capacity for Processing Information
@@ -119,3 +119,27 @@ First two we've seen.
 
 The last one leads us to the next example
 ====
+
+=== Not astonishing code
+
+[source]
+.java.util.Observable
+----
+countObservers()
+deleteObserver(Observer)
+deleteObservers()
+----
+
+*vs*
+
+[source]
+.Collections
+----
+size()
+remove()
+removeAll()
+----
+
+//TODO: some reflection on what we've just learned
+// we are API designers and our fellows developers are consuming it
+// I'll let it sink for a while and before we get back to it, let's jump to one more memory thing

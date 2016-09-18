@@ -184,3 +184,31 @@ Now take this example
 * affordance: what actions does this code allow you to do
 * signifiers: what it suggests, what are the next steps
 ====
+
+//TODO: jak podzielić monolityczny kod na części
+
+=== But how?
+
+[NOTE.speaker]
+====
+Whenever I talk about it there are some questions *but how?*
+
+* How can you split this monolythic codebase into smaller / workable pieces
+====
+
+=== This itself deserves separate talk
+
+*On refactoring*
+
+[NOTE.speaker]
+====
+* but let me share some experience with you
+====
+
+
+//TODO:
+// coheasion as a measure to understand coupling within a class (Tom DeMarco)
+// feathers book
+// splitting monolyth
+// looking for seams
+// implementing domain driven design (shared kernel)

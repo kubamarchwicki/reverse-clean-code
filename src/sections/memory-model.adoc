@@ -116,3 +116,33 @@ Proposed by Richard Atkinson and Richard Shiffrin
 ** Rehears
 * *Memory / disks example*
 ====
+
+=== Let's look again side by side
+
+[source, java]
+.Many parameters
+----
+final String foo = /*some string*/;
+final String bar = /*some other string*/;
+
+final boolean match = foo.regionMatches(true, 5, bar, 9, 10);
+----
+
+*vs*
+
+[source, java]
+.Builder pattern
+----
+final String foo = /*some string*/;
+final String bar = /*some other string*/;
+
+final boolean match = foo.regionMatches()
+    .caseInsensitive()
+    .offset(5)
+    .withOther(bar)
+        .offset(9)
+    .length(10)
+    .matches();
+----
+
+//TODO: refection

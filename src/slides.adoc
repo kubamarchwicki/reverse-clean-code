@@ -202,7 +202,7 @@ OODA Loop - because it's good for everything. And we are agile, don't we
 ** and some brainiac discussion
 ====
 
-//TODO: Belgrade - default parameters
+//TODO: default parameters
 //this shows how much UX heuristics (have default values) have much in common
 //with programming
 
@@ -211,6 +211,9 @@ include::sections/affordances.adoc[]
 include::sections/short-term-memory.adoc[]
 
 include::sections/memory-model.adoc[]
+
+//TODO: API - Niesen Norman usability houristics
+// https://docs.google.com/document/d/1iB21XPG1pl1sxGdq2zskjeZnx7Ezs1VX1ImWBPJsJZ4/edit
 
 == Where does it all go?
 
@@ -228,9 +231,9 @@ include::sections/memory-model.adoc[]
 * icon:check-square-o[] {zwsp} Affordances
 * icon:check-square-o[] {zwsp} Short term memory
 * icon:check-square-o[] {zwsp} Multi-store memory model
+* icon:check-square-o[] {zwsp} {zwsp} Nielsen and Krug Heuristics _(from UX)_
 * icon:square-o[] {zwsp} {zwsp} Accidental complexity
 * icon:square-o[] {zwsp} {zwsp} Attention span
-* icon:square-o[] {zwsp} {zwsp} Nielsen and Krug Heuristics _(from UX)_
 * icon:square-o[] {zwsp} {zwsp} Flow
 //* icon:square-o[] {zwsp} {zwsp} SCARF _(Status, Certainty, Autonomy, Relatedness, Fairness)_ model
 
@@ -274,7 +277,8 @@ image::https://media.giphy.com/media/mbpaehNenYdSE/giphy.gif[background, size=co
 == Links and other goodies
 
 ----
-
+Useful links:
+ *
 
 PDF slides:
   https://speakerdeck.com/kubamarchwicki/reverse-engineering-the-clean-code
