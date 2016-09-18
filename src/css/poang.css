@@ -8,6 +8,14 @@
  * Copyright (C) 2015 Dan Allen
  */
 /* Very very custom styles */
+div.slide-background:not([data-background-hash])::after {
+  content: "#VBD16 ~ @kubem ~ http://jakub.marchwicki.pl";
+	font-size: 15px !important;
+	position: absolute !important;
+	right: 10px;
+	bottom: 10px;
+}
+
 #aboutme .logo img {
   float: right;
   clear: right;
