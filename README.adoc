@@ -1,0 +1,15 @@
+= Reverse engineering clean code
+
+== Links and bibliography
+
+Clean code & SOLID::
+* Original Clean Code article: http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod
+* Kevlin's talk on 'SOLID deconstruction': https://vimeo.com/157708450
+* Cohesion: http://vanderburg.org/blog/2011/01/31/cohesion.html
+
+Psychology principles::
+* Donald Norman's 'Design of Everyday Things':  https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things
+* George Miller's ' Magical Number Seven, Plus or Minus Two: Some Limits on our Capacity for Processing Information': http://psychclassics.yorku.ca/Miller/
+
+Usability heuristics::
+* https://www.nngroup.com/articles/ten-usability-heuristics/
