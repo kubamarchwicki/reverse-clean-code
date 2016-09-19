@@ -202,18 +202,14 @@ OODA Loop - because it's good for everything. And we are agile, don't we
 ** and some brainiac discussion
 ====
 
-//TODO: default parameters
-//this shows how much UX heuristics (have default values) have much in common
-//with programming
-
 include::sections/affordances.adoc[]
 
 include::sections/short-term-memory.adoc[]
 
 include::sections/memory-model.adoc[]
 
-//TODO: API - Niesen Norman usability houristics
-// https://docs.google.com/document/d/1iB21XPG1pl1sxGdq2zskjeZnx7Ezs1VX1ImWBPJsJZ4/edit
+include::sections/ux-heuristics.adoc[]
+
 
 == Where does it all go?
 
@@ -221,8 +217,9 @@ include::sections/memory-model.adoc[]
 
 [NOTE.speaker]
 ====
-* We hardly ever look at our code through coginitive capabilities
+* We hardly ever look at our code through cognitive capabilities
 ** Limitations
+** Recuding the cognitive load
 ====
 
 == Psychology WAT?
@@ -231,7 +228,7 @@ include::sections/memory-model.adoc[]
 * icon:check-square-o[] {zwsp} Affordances
 * icon:check-square-o[] {zwsp} Short term memory
 * icon:check-square-o[] {zwsp} Multi-store memory model
-* icon:check-square-o[] {zwsp} {zwsp} Nielsen and Krug Heuristics _(from UX)_
+* icon:check-square-o[] {zwsp} Nielsen and Krug Heuristics _(from UX)_
 * icon:square-o[] {zwsp} {zwsp} Accidental complexity
 * icon:square-o[] {zwsp} {zwsp} Attention span
 * icon:square-o[] {zwsp} {zwsp} Flow
@@ -244,12 +241,12 @@ Beyond just the clean code
 {zwsp}
 
 Nielsen / Krug::
-* big mistakes cover the smaller ones
+* Don't make me think
+* Big mistakes cover the smaller ones
 Flow::
 * fully immersed
 SCRAF::
 * more social interaction between team members
-
 ====
 
 
@@ -262,36 +259,31 @@ image::21-design-of-everyday-things-v2.jpg[background]
 --
 * So next time when you'll be looking for a book
 * Don't rush for another framework
-* Take a book from totaly differnent world
+* Take a book from totally different world
 --
 
 == Questions?
 
-image::https://media.giphy.com/media/YttkaW0vdUCC4/giphy.gif[background, size=contain]
+image::http://data.whicdn.com/images/63807627/large.gif[background]
+// image::https://media.giphy.com/media/YttkaW0vdUCC4/giphy.gif[background, size=contain]
 
 == Thank you!
 
-image::https://media.giphy.com/media/mbpaehNenYdSE/giphy.gif[background, size=contain]
+image::https://media.giphy.com/media/Puc4FZWExJc0E/giphy.gif[background]
+// image::https://media.giphy.com/media/mbpaehNenYdSE/giphy.gif[background, size=contain]
 
 
 == Links and other goodies
 
 ----
-Useful links:
- *
-
 PDF slides:
   https://speakerdeck.com/kubamarchwicki/reverse-engineering-the-clean-code
 
+Slides source + links:
+  https://github.com/kubamarchwicki/reverse-clean-code
 
 Follow me on twitter
   @kubem
   Email: jakub@marchwicki.pl
   http://jakub.marchwicki.pl
-
-
-This presentation was made with Asciidoc & AsciiDoctor
-  http://asciidoctor.org/
-  https://github.com/kubamarchwicki/reverse-clean-code
-
 ----

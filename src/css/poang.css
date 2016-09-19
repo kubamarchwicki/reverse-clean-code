@@ -8,6 +8,33 @@
  * Copyright (C) 2015 Dan Allen
  */
 /* Very very custom styles */
+/* heuristics */
+section.heuristics h2 {
+  color: #f1f1f1;
+}
+
+section.heuristics div {
+  color: white;
+}
+
+section.heuristics.ok::before {
+  content: "✓";
+  position: absolute;
+	top: -200px;
+	right: 0px;
+	font-size: 10em;
+	color: #61b94b;
+}
+
+section.heuristics.fail::before {
+  content: "❌";
+	position: absolute;
+	top: -200px;
+	right: 0px;
+	font-size: 10em;
+	color: #d89c84;
+}
+
 /* Footer */
 div.slide-background:not([data-background-hash])::after {
   content: "#VBD16 ~ @kubem ~ http://jakub.marchwicki.pl";
@@ -362,6 +389,11 @@ body {
 
 .reveal sub {
   vertical-align: sub;
+}
+
+.reveal span.small {
+	font-size: 0.5em !important;
+	font-weight: normal !important;
 }
 
 .reveal small {

@@ -20,7 +20,7 @@ Java `Observable` implementation
 
 * Collections API
 ** `size()`
-** `remove()`
+** `remove(Object)`
 ** `removeAll()`
 
 === Let's compare side by side
@@ -39,7 +39,7 @@ deleteObservers()
 .Collections
 ----
 size()
-remove()
+remove(Object)
 removeAll()
 ----
 
@@ -134,10 +134,14 @@ deleteObservers()
 .Collections
 ----
 size()
-remove()
+remove(Object)
 removeAll()
 ----
 
-//TODO: some reflection on what we've just learned
-// we are API designers and our fellows developers are consuming it
-// I'll let it sink for a while and before we get back to it, let's jump to one more memory thing
+[NOTE.speaker]
+====
+* naming is consistent
+* names are short and explanotry
+* we haven't still tackled parameters
+** that's gonna be the next example
+====

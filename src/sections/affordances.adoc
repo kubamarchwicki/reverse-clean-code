@@ -212,9 +212,13 @@ Whenever I talk about it there are some questions *but how?*
 * How to organize your classes to be smaller?
 ====
 
-=== This itself deserves a separate talk
+=== 'How' itself deserves a separate talk
 
 *On refactoring*
+
+*On class design*
+
+*On coherence*
 
 [NOTE.speaker]
 ====
@@ -222,9 +226,10 @@ Whenever I talk about it there are some questions *but how?*
 ====
 
 
-//TODO:
-// coheasion as a measure to understand coupling within a class (Tom DeMarco)
-// feathers book
-// splitting monolyth
-// looking for seams
-// implementing domain driven design (shared kernel)
+// TODO: ways to spit huge classes into small ones
+// * coheasion as a measure to understand coupling within a class (Tom DeMarco)
+// * feathers book - martix
+// ** splitting monolyth
+// ** looking for seams
+// * implementing domain driven design (shared kernel)
+// * util class for something completely different

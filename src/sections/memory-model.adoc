@@ -144,7 +144,7 @@ final boolean match = foo.regionMatches()
 ----
 
 [.take-away]
-=== UX of code
+=== Developers' UX
 
 Fellow developers are users +
 Users of the APIs +

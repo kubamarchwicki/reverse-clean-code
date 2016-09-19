@@ -1,0 +1,218 @@
+== Example #{counter:example}
+
+[NOTE.speaker]
+====
+* We've covered memory model (not RAM!)
+* We've said API design is the UX for programmers
+** If so - let's look into other usability heuristics
+====
+
+=== !
+
+[source, java]
+----
+public Person createPerson(
+    final String lastName,
+    final String firstName,
+    final String middleName,
+    final String salutation,
+    final String suffix,
+    final String streetAddress,
+    final String city,
+    final String state,
+    final boolean isFemale,
+    final boolean isEmployed,
+    final boolean isHomeOwner) {
+    // implementation goes here
+  }
+----
+
+// http://marxsoftware.blogspot.com/2013/10/too-many-parameters-in-java-1-custom-types.html
+
+[NOTE.speaker]
+====
+* This has far too mamy parameters
+* It imposes a severe cognitive load and we party covered it just a while ago
+** Can we do it better?
+====
+
+=== !
+
+[source, java]
+----
+public Person createPerson(
+    final Name lastName,
+    final Name firstName,
+    final Name middleName,
+    final Salutation salutation,
+    final Suffix suffix,
+    final StreetAddress address,
+    final City city,
+    final State state,
+    final Gender gender,
+    final EmploymentStatus employment,
+    final HomeownerStatus homeowner) {
+    // implementation goes here
+  }
+----
+
+[NOTE.speaker]
+====
+* With types we at least know what's going on
+* IDE can help us with
+** Those the API is still flaky
+====
+
+=== !
+
+[source, java]
+----
+createPerson(new Name("Jakub"), new Name("Marchwicki"), null, //<1>
+    Salutation.MR, null, //<2>
+    null, null, null, //<3>
+    Gender.MALE,
+    EmploymentStatus.EMPLOYED, //<4>
+    null); //<5>
+----
+<1> No middle name
+<2> Neither suffix
+<3> Address might not be relevant
+<4> This is actually default for 95% of people (in this context)
+<5> Possibly neither or not relevant
+
+=== !
+
+[source, java]
+----
+public Person createPerson(
+    final FullName fullName,
+    final Address address,
+    final Gender gender,
+    final EmploymentStatus employment,
+    final HomeownerStatus homeownerStatus) {
+    // implementation goes here
+  }
+----
+
+[NOTE.speaker]
+====
+We can encapsuale further
+====
+
+=== !
+
+[source, java]
+----
+createPerson()
+  .withFullName("Jakub", "Marchwicki") //<1>
+    .withMiddleName("M.") //<2>
+    .newFullName()
+  .male() //<3>
+  .notEmployed() //<4>
+  .newPerson();
+----
+<1> Forces defaults
+<2> This is actually optional
+<3> Which is better than `withGender(Gender.MALE)`
+<4> Defaults to `EmploymentStatus.EMPLOYED`; this flags it differently
+
+[NOTE.speaker]
+====
+And combine with buider pattern
+====
+
+=== !
+
+[source, java]
+----
+public Person createMalePerson(final FullName fullName, final Address address) {
+     return createPerson(fullName, address, Gender.MALE,
+        EmploymentStatus.EMPLOYED, HomeownerStatus.OWNER);
+}
+
+public Person createPerson(final FullName fullName, final Address address, final Gender gender) {
+     return createPerson(fullName, address, gender,
+        EmploymentStatus.EMPLOYED, HomeownerStatus.OWNER);
+}
+
+public Person createPerson(
+    final FullName fullName,
+    final Address address,
+    final Gender gender,
+    final EmploymentStatus employment,
+    final HomeownerStatus homeownerStatus) {
+    // implementation goes here
+  }
+----
+
+
+[NOTE.speaker]
+====
+Methods overloading
+====
+
+=== *A* usability heuristic
+
+[quote]
+Data entry screens contain default values when appropriate and show the structure of the data.
+
+[NOTE.speaker]
+====
+There are many others which might be also applicable to programming
+Let's have a look
+====
+
+include::ux-heuristics-nielsen.adoc[leveloffset=+1]
+
+=== Why heuristics?
+
+[NOTE.speaker]
+====
+* Heuristics are an easy evaluation methods, when looking for smells / usability problems
+* heuristics allow us to spot problems quickly and effectively
+====
+
+[.take-away]
+=== Usability of code
+
+Bad code is a usability problem
+
+[small]#* code, design, architecture#
+
+[NOTE.speaker]
+====
+* We can overcome them - but it comes with a price
+* The less we need to reason about what we see - the better
+====
+
+=== Cost of usability problems
+
+* Unable to complete common tasks
+* Significantly slow users down
+* Encourage frustration and irritation
+
+=== Heuristics for software
+
+[%step]
+* Comments (5)
+* Environment (2)
+* Functions (4)
+* General programming (36)
+* Special for Java (3)
+* Naming (7)
+* Test (9)
+
+[NOTE.speaker]
+====
+Sure!
+
+* Chapter 17 of clean code book
+* 47 of these - quite a lot
+* Fairly technical, language dependnet
+** Can we make them more universal?
+====
+
+=== Can we make it better?
+
+// TODO: Kent Beck values
+// http://blog.xebia.com/clean-code-vs-implementation-patterns/
