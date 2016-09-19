@@ -143,4 +143,9 @@ final boolean match = foo.regionMatches()
     .matches();
 ----
 
-//TODO: refection
+[.take-away]
+=== UX of code
+
+Fellow developers are users +
+Users of the APIs +
+*They deserve a great User Experience*

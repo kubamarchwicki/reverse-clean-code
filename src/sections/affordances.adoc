@@ -183,7 +183,23 @@ Now take this example
 * signifiers: what it suggests, what are the next steps
 ====
 
-//TODO: jak podzielić monolityczny kod na części
+[.take-away]
+=== Beware of cargo cult
+
+People will do things in a way, +
+because they've always done like that
+
+[NOTE.speaker]
+====
+* At some point people stop asking why and follow the given path
+** Existing pattern
+** No matter if it's good or bad
+** *Cargo cult*
+* Energy conservation
+** Brain takes the easiest path, demanding least efforts
+* Mimicry in biology
+**  antipredator adaptation. Do we have to protect ourselves against anybody at work?
+====
 
 === But how?
 
@@ -191,10 +207,12 @@ Now take this example
 ====
 Whenever I talk about it there are some questions *but how?*
 
-* How can you split this monolythic codebase into smaller / workable pieces
+* How not to combine too many concepts in a single class?
+* How can you split this monolythic codebase into smaller / workable pieces?
+* How to organize your classes to be smaller?
 ====
 
-=== This itself deserves separate talk
+=== This itself deserves a separate talk
 
 *On refactoring*
 

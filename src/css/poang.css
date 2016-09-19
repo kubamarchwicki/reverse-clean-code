@@ -8,12 +8,48 @@
  * Copyright (C) 2015 Dan Allen
  */
 /* Very very custom styles */
+/* Footer */
 div.slide-background:not([data-background-hash])::after {
   content: "#VBD16 ~ @kubem ~ http://jakub.marchwicki.pl";
 	font-size: 15px !important;
 	position: absolute !important;
 	right: 10px;
 	bottom: 10px;
+}
+
+/* take away */
+.slide-background.take-away {
+  background-color: white;
+}
+
+section.take-away::before {
+	content: "TAKE-AWAY";
+	border: 13px solid #557527 !important;
+	padding: 15px;
+	border-radius: 25px;
+	color: #73AD21;
+	font-size: 2em;
+	top: -200px;
+	right: -100px;
+	-moz-transform: rotate(20deg);
+	position: absolute;
+  font-family: fantasy;
+}
+
+section.take-away h2 {
+  color: #73AD21;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+section.take-away div.paragraph {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+section.take-away strong {
+  font-size: 140%;
+  text-transform: capitalize;
 }
 
 #aboutme .logo img {
@@ -554,7 +590,7 @@ td.valign-top {
   font-weight: bold;
 }
 
-.reveal .has-light-background h2 {
+.reveal .has-light-background:not(.take-away) h2 {
   color: #DBD8D8 !important;
 }
 
