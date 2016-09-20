@@ -1,0 +1,174 @@
+[.heuristics, background-color="#616161"]
+== Class design 101
+
+[.heuristics, background-color="#616161"]
+== Classes of classes
+
+[cols="^.^,^.^", frame=none]
+|===
+a| === New
+a| === Existing
+
+a|[%step]
+* How to structure class code?
+* How to organize code into classes?
+* How much put into a single class?
+
+a|[%step]
+* Does this class hold too much?
+* How to split it into chunks?
+* How to understand where what belongs?
+
+|===
+
+[NOTE.speaker]
+====
+* What is the right size of the class
+* New
+** Shall we add this method to a class, does it belong here?
+* Existing
+** We have a service which is as big as Mount Everest
+** We can an utility class which is 8KLOC
+
+Let's start basics.
+====
+
+[.heuristics, background-color="#616161"]
+== Classes should be cohesive!
+
+*they say*
+
+[.heuristics, background-color="#616161"]
+== Cohesion
+
+"(...) cohesion is a measure of the strength of association of elements inside a module."
+-- Tom DeMarco, Structured Analysis and System Specification
+
+[.heuristics, background-color="#616161"]
+== !
+
+[quote, Glenn Vanderburg, http://vanderburg.org/blog/2011/01/31/cohesion.html]
+____
+Things that are cohesive (...) naturally stick to each other because they are of like kind, or because they fit so well together (...) in a mutual relationship.
+
+The pieces (...) seem to be related, they seem to belong together, and it would feel somewhat unnatural (it would result in tight coupling!) to pull them apart
+____
+
+[NOTE.speaker]
+====
+* If we duct tape two things they stick together as well - but that's not relationship we are looking after
+* This is all nice, but we need some tools, some (mental frameworks)
+====
+
+[.heuristics, background-color="#616161"]
+== How to organize the system?
+
+[.heuristics, background-color="#616161"]
+== Domain Driven Design
+
+image::https://zombiecodekill.files.wordpress.com/2015/09/ddd.jpg[background]
+
+[NOTE.speaker]
+====
+This gives patterns (building blocks how to organize your code)
+
+*Vernon Vaughn*::
+* Implementing DDD
+* DDD distilled
+====
+
+[.heuristics, background-color="#616161"]
+== Legacy code
+
+[source, java]
+----
+public class Sql {
+   public Sql(String table, Column[] columns);
+   public String create();
+   public String insert(Object[] fields);
+   public String selectAll();
+   public String fieldByKey(String keyColumn, String keyValue);
+   private String columnList(Column[] columns);
+   private String valuesList(Object[] fields, final Column[] columns);
+}
+----
+
+[NOTE.speaker]
+====
+* Problem: *class was holding too many concepts*
+** What is concept?
+** What is too many?
+** How me measure it?
+
+* We can analyze manually...
+====
+
+[.heuristics, background-color="#616161"]
+== !
+
+image::https://zeroturnaround.com/wp-content/uploads/2014/02/35-find-usages-result-640x311.png[width=75%]
+
+[NOTE.speaker]
+====
+Class by class
+
+or..
+====
+
+
+[.heuristics, background-color="#616161"]
+== Michael Feathers Quadrant
+
+image::https://komplettdev.files.wordpress.com/2012/11/churn_max_complexity_chart1.png[width=75%]
+
+[NOTE.speaker]
+====
+Candidate for refactoring in general
+====
+
+[.heuristics, background-color="#616161"]
+== Michael Feathers Quadrant
+
+image::feathers_quadrant.png[width=75%]
+
+[NOTE.speaker]
+====
+Candidates for splitting
+====
+
+[.heuristics, background-color="#616161"]
+== "Layered architecture"
+
+image::http://www.guidanceshare.com/images/9/96/Layers.PNG[width=75%]
+
+
+[.heuristics, background-color="#616161"]
+== Not so layered architecture
+
+image::http://www.turro.org/docs/javadoc/html/dd/d89/classorg_1_1turro_1_1jpa_1_1Dao_a662fe099f610ef4b988489df747a064f_icgraph.png[role="bg-white"]
+
+[NOTE.speaker]
+====
+* Split it into concepts
+* Separate concepts into packages, domains they belong to
+* If it belongs into multiple domains DDD has a concept of Shared Kernel to combine them together
+====
+
+
+[.heuristics, background-color="#616161"]
+== Working Effectively {nbsp} with Legacy Code
+
+image::http://thecookiezen.com/blog/images/2.JPG[background]
+
+[NOTE.speaker]
+====
+* Looking for seams in legacy code
+====
+
+[.take-away]
+== There is no legacy code
+
+If noone uses it - *abandon* +
+If you can't - it's *business as usual*
+
+*cope with it*

@@ -8,8 +8,14 @@
  * Copyright (C) 2015 Dan Allen
  */
 /* Very very custom styles */
+.imageblock.bg-white img {
+	background-color: white;
+}
+
+
 /* heuristics */
-section.heuristics h2 {
+section.heuristics h2,
+section.heuristics h3 {
   color: #f1f1f1;
 }
 
@@ -381,6 +387,10 @@ body {
 
 .reveal table tr:last-child td {
   border-bottom: none;
+}
+
+table td.halign-center {
+	text-align: center;
 }
 
 .reveal sup {

@@ -87,7 +87,8 @@ This is scarry
 
 == The Clean Code
 
-image::07-clean-code-v2.jpg[background]
+image::http://alonsogarciapablo.com/blog/wp-content/uploads/2011/01/MG_1805.jpg[background]
+// image::07-clean-code-v2.jpg[background]
 
 == Implementation Patterns
 

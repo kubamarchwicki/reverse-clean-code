@@ -214,22 +214,14 @@ Whenever I talk about it there are some questions *but how?*
 
 === 'How' itself deserves a separate talk
 
-*On refactoring*
-
 *On class design*
 
-*On coherence*
+*On refactoring*
+
 
 [NOTE.speaker]
 ====
 * but let me share some experience with you
 ====
 
-
-// TODO: ways to spit huge classes into small ones
-// * coheasion as a measure to understand coupling within a class (Tom DeMarco)
-// * feathers book - martix
-// ** splitting monolyth
-// ** looking for seams
-// * implementing domain driven design (shared kernel)
-// * util class for something completely different
+include::affordances-class-design.adoc[leveloffset=+1]
