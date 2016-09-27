@@ -41,7 +41,7 @@ Let's start basics.
 [.heuristics, background-color="#616161"]
 == Cohesion
 
-"(...) cohesion is a measure of the strength of association of elements inside a module."
+"(...) is a measure of the strength of association of elements inside a module."
 -- Tom DeMarco, Structured Analysis and System Specification
 
 [.heuristics, background-color="#616161"]
@@ -52,6 +52,16 @@ ____
 Things that are cohesive (...) naturally stick to each other because they are of like kind, or because they fit so well together (...) in a mutual relationship.
 
 The pieces (...) seem to be related, they seem to belong together, and it would feel somewhat unnatural (it would result in tight coupling!) to pull them apart
+____
+
+[.heuristics, background-color="#616161"]
+== !
+
+[quote, Glenn Vanderburg, http://vanderburg.org/blog/2011/01/31/cohesion.html]
+____
+Things that are cohesive (...) *naturally stick* to each other because they are of *like kind*, or because they *fit so well together* (...) in a mutual relationship.
+
+The pieces (...) *seem to be* related, they seem to belong together, and it would *feel somewhat unnatural* (it would result in tight coupling!) to pull them apart
 ____
 
 [NOTE.speaker]

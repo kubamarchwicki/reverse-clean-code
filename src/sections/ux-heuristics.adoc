@@ -59,6 +59,7 @@ public Person createPerson(
 [NOTE.speaker]
 ====
 * With types we at least know what's going on
+* *No primitive obsession*
 * IDE can help us with
 ** Those the API is still flaky
 ====
@@ -111,7 +112,7 @@ createPerson()
   .notEmployed() //<4>
   .newPerson();
 ----
-<1> Forces defaults
+<1> Forces mandatory fields
 <2> This is actually optional
 <3> Which is better than `withGender(Gender.MALE)`
 <4> Defaults to `EmploymentStatus.EMPLOYED`; this flags it differently
@@ -211,8 +212,3 @@ Sure!
 * Fairly technical, language dependnet
 ** Can we make them more universal?
 ====
-
-=== Can we make it better?
-
-// TODO: Kent Beck values
-// http://blog.xebia.com/clean-code-vs-implementation-patterns/

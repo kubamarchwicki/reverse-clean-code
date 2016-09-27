@@ -7,6 +7,18 @@ Clean code & SOLID::
 * Kevlin's talk on 'SOLID deconstruction': https://vimeo.com/157708450
 * Cohesion: http://vanderburg.org/blog/2011/01/31/cohesion.html
 
+Books::
+* Robert C. Martin 'Clean Code': https://www.goodreads.com/book/show/3735293-clean-code
+* Kent Beck 'Implementation Patterns': https://www.goodreads.com/book/show/781559.Implementation_Patterns
+* Eric Evans 'Domain Driven Design': https://www.goodreads.com/book/show/179133.Domain_Driven_Design
+* Vernon Vaughn 'Implementing Domain Driven Design': https://www.goodreads.com/book/show/15756865-implementing-domain-driven-design
+* Vernon Vaughn 'Domain Driven Design Distilled': https://www.goodreads.com/book/show/28602719-domain-driven-design-distilled
+* Michael Feathers 'Working Effectively with Legacy Code': https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code
+
+API design::
+* Joshua Bloch - How To Design A Good API and Why it Matters: https://www.youtube.com/watch?v=aAb7hSCtvGw
+* Jaroslav Tulah - 20 API Paradoxes: https://www.goodreads.com/book/show/19101788-20-api-paradoxes
+
 Psychology principles::
 * Donald Norman's 'Design of Everyday Things':  https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things
 * George Miller's ' Magical Number Seven, Plus or Minus Two: Some Limits on our Capacity for Processing Information': http://psychclassics.yorku.ca/Miller/

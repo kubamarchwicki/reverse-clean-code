@@ -197,8 +197,6 @@ because they've always done like that
 ** *Cargo cult*
 * Energy conservation
 ** Brain takes the easiest path, demanding least efforts
-* Mimicry in biology
-**  antipredator adaptation. Do we have to protect ourselves against anybody at work?
 ====
 
 === But how?

@@ -57,14 +57,35 @@ So why on Earth `Observable` couldn't have size etc?
 * Consistency - same thing means same things *everywhere*
 * Limited number of parameters, properly ordered
 
+[NOTE.speaker]
+====
+Further reading on this subject
+
+* Joshua Bloch - How To Design A Good API and Why it Matters
+* Jaroslav Tulah - 20 API Paradoxes
+====
+
+
 === Psychology WAT?
+
+[NOTE.speaker]
+====
+There was a guy
+
+* George Miller
+* Substantial work on how momery works
+* In 1956 he wrote a paper "Some Limits on our Capacity for Processing Information", in which
+====
+
 
 === The Magical Number Seven
 
-[quote, George Miller (1956)]
+[quote, George Miller (1956), Some Limits on our Capacity for Processing Information]
 ____
-(...) span of immediate memory impose severe limitations on the amount of information that we are able to receive, process, and remember. By organizing the stimulus input simultaneously into several dimensions and successively into a sequence of chunks, we manage to break (or at least stretch) this informational bottleneck.
-Some Limits on our Capacity for Processing Information
+(...) span of immediate memory impose severe limitations on the amount of information that we are able to +
+receive, process, and remember. By organizing the stimulus input simultaneously into several dimensions +
+and successively into a sequence of chunks, we manage +
+to break (or at least stretch) this informational bottleneck.
 ____
 
 [NOTE.speaker]
@@ -81,6 +102,13 @@ Famous paper from 1956
 
 *Reminds of something?*
 ====
+
+=== The Magical Number Seven
+
+[quote, George Miller (1956), Some Limits on our Capacity for Processing Information]
+____
+(...) span of immediate memory impose severe limitations on the *amount of information* that we are able to receive, process, and remember. By organizing the stimulus input simultaneously into *several dimensions* and successively into a *sequence of chunks*, we manage to break (or at least stretch) this informational bottleneck.
+____
 
 [background-color="white"]
 === !
@@ -102,6 +130,11 @@ image::31-rosyjskie_liczydlo.jpg[width=800]
 This has been known ever since - like in this classic example
 ====
 
+=== API design
+
+* Short, self explanatory names
+* Consistency - same thing means same things *everywhere*
+* Limited number of parameters, properly ordered
 
 === Principles of least astonishment
 
@@ -112,10 +145,6 @@ This has been known ever since - like in this classic example
 [NOTE.speaker]
 ====
 We don't our users to feel ashamed they don't remember something
-
-First two we've seen.
-
-The last one leads us to the next example
 ====
 
 === Not astonishing code
@@ -144,4 +173,8 @@ removeAll()
 * names are short and explanotry
 * we haven't still tackled parameters
 ** that's gonna be the next example
+
+First two we've seen.
+
+The last one leads us to the next example
 ====
