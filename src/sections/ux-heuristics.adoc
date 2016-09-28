@@ -131,19 +131,17 @@ public Person createMalePerson(final FullName fullName, final Address address) {
         EmploymentStatus.EMPLOYED, HomeownerStatus.OWNER);
 }
 
-public Person createPerson(final FullName fullName, final Address address, final Gender gender) {
-     return createPerson(fullName, address, gender,
-        EmploymentStatus.EMPLOYED, HomeownerStatus.OWNER);
+public Person createPerson(final FullName fullName, final Address address,
+    final Gender gender) {
+      return createPerson(fullName, address, gender,
+          EmploymentStatus.EMPLOYED, HomeownerStatus.OWNER);
 }
 
-public Person createPerson(
-    final FullName fullName,
-    final Address address,
+public Person createPerson(final FullName fullName, final Address address,
     final Gender gender,
-    final EmploymentStatus employment,
-    final HomeownerStatus homeownerStatus) {
+    final EmploymentStatus employment, final HomeownerStatus homeownerStatus) {
     // implementation goes here
-  }
+}
 ----
 
 
