@@ -43,7 +43,7 @@ section.heuristics.fail::before {
 
 /* Footer */
 div.slide-background:not([data-background-hash])::after {
-  content: "#VBD16 ~ @kubem ~ http://jakub.marchwicki.pl";
+  content: "#VDB16 ~ @kubem ~ http://jakub.marchwicki.pl";
 	font-size: 15px !important;
 	position: absolute !important;
 	right: 10px;
@@ -395,6 +395,7 @@ table td.halign-center {
 
 .reveal sup {
   vertical-align: super;
+	text-transform: none;
 }
 
 .reveal sub {
