@@ -1,22 +1,9 @@
 = Reverse engineering the clean code
 Jakub Marchwicki <@kubem>
-:idprefix: sslide_
+include::properties.adoc[]
 :title-slide-background-image: code-example.jpg
 :title-slide-background-size: cover
-:icons: font
-:imagesdir: images
-:figure-caption!:
-//:revealjsdir: /home/kubam/workspaces/asciidoctor/reveal.js
-:revealjs_center: true
-:revealjs_theme: poang
-:revealjs_transition: none
-:revealjs_progress: false
-:revealjs_history: true
-:revealjs_controls: false
-:revealjs_customtheme: css/poang.css
-:revealjs_width: 1440
-:revealjs_height: 960
-:source-highlighter: coderay
+
 
 == Not only the clean code
 

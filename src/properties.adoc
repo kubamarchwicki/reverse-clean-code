@@ -1,0 +1,17 @@
+:idprefix: sslide_
+:title-slide-background-image: https://i.ytimg.com/vi/7UaPL5PGywo/maxresdefault.jpg
+:title-slide-background-size: cover
+:icons: font
+:imagesdir: images
+:figure-caption!:
+//:revealjsdir: /home/kubam/workspaces/asciidoctor/reveal.js
+:revealjs_center: true
+:revealjs_theme: poang
+:revealjs_transition: none
+:revealjs_progress: false
+:revealjs_history: true
+:revealjs_controls: false
+:revealjs_customtheme: css/poang.css
+:revealjs_width: 1440
+:revealjs_height: 960
+:source-highlighter: coderay

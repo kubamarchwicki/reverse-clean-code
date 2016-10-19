@@ -221,5 +221,3 @@ Whenever I talk about it there are some questions *but how?*
 ====
 * but let me share some experience with you
 ====
-
-include::affordances-class-design.adoc[leveloffset=+1]

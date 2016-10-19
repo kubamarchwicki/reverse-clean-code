@@ -12,6 +12,10 @@
 	background-color: white;
 }
 
+#links code {
+	background: rgba(255,255,255,0.6);
+	color: black;
+}
 
 /* heuristics */
 section.heuristics h2,
@@ -43,7 +47,7 @@ section.heuristics.fail::before {
 
 /* Footer */
 div.slide-background:not([data-background-hash])::after {
-  content: "#VDB16 ~ @kubem ~ http://jakub.marchwicki.pl";
+  content: "#geecon ~ @kubem ~ http://jakub.marchwicki.pl";
 	font-size: 20px !important;
 	position: absolute !important;
 	right: 10px;

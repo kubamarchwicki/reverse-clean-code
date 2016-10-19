@@ -1,22 +1,6 @@
 = Reverse engineering clean code
 Jakub Marchwicki <@kubem>
-:idprefix: sslide_
-:title-slide-background-image: https://i.ytimg.com/vi/7UaPL5PGywo/maxresdefault.jpg
-:title-slide-background-size: cover
-:icons: font
-:imagesdir: images
-:figure-caption!:
-//:revealjsdir: /home/kubam/workspaces/asciidoctor/reveal.js
-:revealjs_center: true
-:revealjs_theme: poang
-:revealjs_transition: none
-:revealjs_progress: false
-:revealjs_history: true
-:revealjs_controls: false
-:revealjs_customtheme: css/poang.css
-:revealjs_width: 1440
-:revealjs_height: 960
-:source-highlighter: coderay
+include::properties.adoc[]
 
 == Reverse engineering
 
@@ -204,6 +188,7 @@ OODA Loop - because it's good for everything. And we are agile, don't we
 ====
 
 include::sections/affordances.adoc[]
+include::sections/affordances-class-design.adoc[leveloffset=+1]
 
 include::sections/short-term-memory.adoc[]
 
@@ -302,13 +287,10 @@ image::21-design-of-everyday-things-v2.jpg[background]
 == Questions?
 
 image::http://data.whicdn.com/images/63807627/large.gif[background]
-// image::https://media.giphy.com/media/YttkaW0vdUCC4/giphy.gif[background, size=contain]
 
 == Thank you!
 
 image::https://media.giphy.com/media/Puc4FZWExJc0E/giphy.gif[background]
-// image::https://media.giphy.com/media/mbpaehNenYdSE/giphy.gif[background, size=contain]
-
 
 == Links and other goodies
 

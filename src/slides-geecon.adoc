@@ -1,0 +1,204 @@
+= Reverse engineering clean code
+Jakub Marchwicki <@kubem>
+include::properties.adoc[]
+
+== What people think cleancode is about
+
+image::http://alonsogarciapablo.com/blog/wp-content/uploads/2011/01/MG_1805.jpg[background]
+
+== !
+
+image::https://media.giphy.com/media/10zHDq77BLwcy4/giphy.gif[background]
+
+== What clean code is really about?
+
+image::http://www.catsvscancer.org/wp-content/uploads/2015/04/Professor_Cat.gif[background]
+
+== It's about Psychology!!!
+
+== Psychology WAT?
+
+== !
+
+image::https://media.giphy.com/media/2rqEdFfkMzXmo/giphy.gif[background]
+
+[NOTE.speaker]
+====
+* but through out this session I'll take a different perspective
+* we will have a look into some good code and some bad
+** and think how our brains works with that
+** is there any psychology behind it?
+====
+
+
+[%notitle, role="no-shadow"]
+== .. not doing like this
+
+image::05-comments.png[]
+
+[NOTE.speaker]
+====
+In essence:
+
+* Not doing like this
+====
+
+[%notitle, role="no-shadow"]
+== .. put any meme here
+
+image::05-comments-any.png[]
+
+
+[%notitle, role="no-shadow"]
+== .. to feel like this
+
+image::06-comments-woohoo.png[]
+
+[NOTE.speaker]
+====
+* Not to feel like this... after a few week
+
+{zwsp}
+
+* we obviously see advantages of clean code, why it works
+** it allows us to work better, faster
+** communicate more efficently
+* Kent has given this different perspective on what was important
+** Communication. Simplicity. Flexibility
+====
+
+
+== Kittens move away!
+
+image::https://media.giphy.com/media/ZnDQ6rL0wr9Ha/giphy.gif[background]
+
+// Tutaj skończyłem
+
+include::sections/affordances.adoc[]
+
+// include::sections/short-term-memory.adoc[]
+
+include::sections/memory-model.adoc[]
+
+// include::sections/ux-heuristics.adoc[]
+
+
+== Is that all?
+
+
+== The cognitive limitations
+
+[NOTE.speaker]
+====
+* We hardly ever look at our code through cognitive capabilities
+** Limitations
+** Recuding the cognitive load
+====
+
+== Psychology WAT?
+
+[%step]
+* icon:check-square-o[] {zwsp} Affordances
+* icon:check-square-o[] {zwsp} Multi-store memory model
+* icon:square-o[] {zwsp} Short term memory
+* icon:square-o[] {zwsp} Nielsen and Krug Heuristics _(from UX)_
+* icon:square-o[] {zwsp} {zwsp} Accidental complexity
+* icon:square-o[] {zwsp} {zwsp} Attention span
+* icon:square-o[] {zwsp} {zwsp} Flow
+//* icon:square-o[] {zwsp} {zwsp} SCARF _(Status, Certainty, Autonomy, Relatedness, Fairness)_ model
+
+[NOTE.speaker]
+====
+Beyond just the clean code
+
+{zwsp}
+
+Nielsen::
+* Big mistakes cover the smaller ones
+Flow::
+* fully immersed
+SCRAF::
+* more social interaction between team members
+====
+
+[%notitle]
+== Norman's book
+
+image::21-design-of-everyday-things-v2.jpg[background]
+
+[NOTE.speaker]
+--
+* So next time when you'll be looking for a book
+* Don't rush for another framework
+* Take a book from totally different world
+--
+
+[.take-away]
+== 1^st^ Rule of thumb
+
+*Don't make me think*
+
+[NOTE.speaker]
+====
+* people don’t like to puzzle over how to do things
+* there is enough of thinking in the business domain
+** *the inherent complexity*
+* don't make it even more complex
+** let me conserve more energy for the creative problems I have
+====
+
+[.take-away]
+== 2^nd^ Rule of thumb
+
+{zwsp}
+
+*A bit of empathy never killed anybody*
+
+[NOTE.speaker]
+====
+* What you write is of a huge importance to others
+** to help satisfy human needs - there is human on the other side
+* smaller cost of understanding and analysis upfront
+** less non-important elements require our immediate attention
+====
+
+
+[.take-away]
+== Rules of thumb
+
+*Don't make me think*
+
+*A bit of empathy never killed anybody*
+
+
+== Questions?
+
+image::http://data.whicdn.com/images/63807627/large.gif[background]
+
+== Thank you!
+
+image::https://media.giphy.com/media/Puc4FZWExJc0E/giphy.gif[background]
+
+[#llinks%notitle]
+== Links and other goodies
+
+image::geecon_ppt_slide-01.jpg[background]
+
+----
+PDF slides + video:
+  https://speakerdeck.com/kubamarchwicki/reverse-engineering-the-clean-code-vdb16
+  https://www.youtube.com/watch?v=OvMvpSvlDbo&t=2h37m30s
+
+Read the full article:
+  src::
+    https://gist.github.com/kubamarchwicki/d93b7ce20ec078e5276119479ea233f4
+  english:: http://www.nljug.org/databasejava/
+  polish:: https://programistamag.pl/ (issue: 52 - 9/2016)
+
+Slides source + links:
+  https://github.com/kubamarchwicki/reverse-clean-code
+
+Follow me on twitter
+  @kubem
+  http://jakub.marchwicki.pl
+----

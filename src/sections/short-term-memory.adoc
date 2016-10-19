@@ -113,6 +113,7 @@ ____
 [background-color="white"]
 === !
 
+// https://pbs.twimg.com/media/CuvKsCNWAAA_fOC.jpg
 image::32-clean-code-functions-chapter3.png[background, size=contain]
 
 [NOTE.speaker]
