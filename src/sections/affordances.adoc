@@ -210,7 +210,7 @@ Whenever I talk about it there are some questions *but how?*
 * How to organize your classes to be smaller?
 ====
 
-=== 'How' itself deserves a separate talk
+=== 'How' deserves a separate talk
 
 *On class design*
 

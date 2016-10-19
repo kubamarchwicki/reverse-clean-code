@@ -134,7 +134,7 @@ image::21-design-of-everyday-things-v2.jpg[background]
 --
 
 [.take-away]
-== 1^st^ Rule of thumb
+== A Single Rule of thumb
 
 *Don't make me think*
 
@@ -145,31 +145,9 @@ image::21-design-of-everyday-things-v2.jpg[background]
 ** *the inherent complexity*
 * don't make it even more complex
 ** let me conserve more energy for the creative problems I have
+
+* show intent and make it consumable
 ====
-
-[.take-away]
-== 2^nd^ Rule of thumb
-
-{zwsp}
-
-*A bit of empathy never killed anybody*
-
-[NOTE.speaker]
-====
-* What you write is of a huge importance to others
-** to help satisfy human needs - there is human on the other side
-* smaller cost of understanding and analysis upfront
-** less non-important elements require our immediate attention
-====
-
-
-[.take-away]
-== Rules of thumb
-
-*Don't make me think*
-
-*A bit of empathy never killed anybody*
-
 
 == Questions?
 
