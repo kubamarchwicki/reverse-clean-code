@@ -6,30 +6,6 @@ include::properties.adoc[]
 
 image::http://alonsogarciapablo.com/blog/wp-content/uploads/2011/01/MG_1805.jpg[background]
 
-== !
-
-image::https://media.giphy.com/media/10zHDq77BLwcy4/giphy.gif[background]
-
-== What clean code is really about?
-
-image::http://www.catsvscancer.org/wp-content/uploads/2015/04/Professor_Cat.gif[background]
-
-== It's about Psychology!!!
-
-== Psychology WAT?
-
-== !
-
-image::https://media.giphy.com/media/2rqEdFfkMzXmo/giphy.gif[background]
-
-[NOTE.speaker]
-====
-* but through out this session I'll take a different perspective
-* we will have a look into some good code and some bad
-** and think how our brains works with that
-** is there any psychology behind it?
-====
-
 
 [%notitle, role="no-shadow"]
 == .. not doing like this
@@ -60,28 +36,58 @@ image::06-comments-woohoo.png[]
 
 {zwsp}
 
-* we obviously see advantages of clean code, why it works
-** it allows us to work better, faster
-** communicate more efficently
-* Kent has given this different perspective on what was important
-** Communication. Simplicity. Flexibility
+* Now we could've go through all (or at least some clean code principles)
+* But that would be boring
 ====
 
+== !
+
+image::https://media.giphy.com/media/10zHDq77BLwcy4/giphy.gif[background]
+
+== What clean code is really about?
+
+image::http://www.catsvscancer.org/wp-content/uploads/2015/04/Professor_Cat.gif[background]
+
+[NOTE.speaker]
+====
+Can we make a more scientific approach?
+====
+
+
+== It's about Psychology!!!
+
+[NOTE.speaker]
+====
+And about cognition etc
+====
+
+
+== Psychology WAT?
+
+== !
+
+image::https://media.giphy.com/media/2rqEdFfkMzXmo/giphy.gif[background]
+
+[NOTE.speaker]
+====
+* I'll try to show a different perspective on clean code mechanics
+* we will have a look into some good code and some bad
+** and think how our brains works with that
+** is there any psychology behind it?
+====
 
 == Kittens move away!
 
 image::https://media.giphy.com/media/ZnDQ6rL0wr9Ha/giphy.gif[background]
 
-// Tutaj skończyłem
+[NOTE.speaker]
+====
+We are getting serious
+====
+
 
 include::sections/affordances.adoc[]
-
-// include::sections/short-term-memory.adoc[]
-
 include::sections/memory-model.adoc[]
-
-// include::sections/ux-heuristics.adoc[]
-
 
 == Is that all?
 
@@ -110,15 +116,6 @@ include::sections/memory-model.adoc[]
 [NOTE.speaker]
 ====
 Beyond just the clean code
-
-{zwsp}
-
-Nielsen::
-* Big mistakes cover the smaller ones
-Flow::
-* fully immersed
-SCRAF::
-* more social interaction between team members
 ====
 
 [%notitle]
@@ -140,22 +137,24 @@ image::21-design-of-everyday-things-v2.jpg[background]
 
 [NOTE.speaker]
 ====
+* *show intent and make it consumable*
 * people don’t like to puzzle over how to do things
+* don't waste others' time on pondering about bad code
 * there is enough of thinking in the business domain
 ** *the inherent complexity*
 * don't make it even more complex
 ** let me conserve more energy for the creative problems I have
-
-* show intent and make it consumable
 ====
+
+[%notitle]
+== Krug's book
+
+image::http://hoketronics.net/wp-content/uploads/2009/07/sk_dmmt.jpg[background]
 
 == Questions?
 
-image::http://data.whicdn.com/images/63807627/large.gif[background]
+image::https://media.giphy.com/media/hKW0FFvpVSvmM/giphy.gif[background]
 
-== Thank you!
-
-image::https://media.giphy.com/media/Puc4FZWExJc0E/giphy.gif[background]
 
 [#llinks%notitle]
 == Links and other goodies
@@ -180,3 +179,7 @@ Follow me on twitter
   @kubem
   http://jakub.marchwicki.pl
 ----
+
+== Thank you!
+
+image::https://media.giphy.com/media/Puc4FZWExJc0E/giphy.gif[background]
