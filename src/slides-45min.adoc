@@ -1,7 +1,7 @@
 = Reverse engineering clean code
 Jakub Marchwicki <@kubem>
 include::properties.adoc[]
-:aditional-heuristics:
+:aditional-heuristics!:
 
 == Reverse engineering
 
@@ -95,7 +95,7 @@ image::sorted.gif[background]
 
 image::https://media.giphy.com/media/gJSJgg6wE32JG/giphy.gif[background]
 
-== Clean code is about...
+== Clean code is really about...
 
 [%notitle, role="no-shadow"]
 == .. not doing like this
@@ -189,7 +189,6 @@ OODA Loop - because it's good for everything. And we are agile, don't we
 ====
 
 include::sections/affordances.adoc[]
-include::sections/affordances-class-design.adoc[leveloffset=+1]
 
 include::sections/short-term-memory.adoc[]
 
@@ -206,7 +205,7 @@ include::sections/ux-heuristics.adoc[]
 ====
 * We hardly ever look at our code through cognitive capabilities
 ** Limitations
-** Recuding the cognitive load
+** Reducing the cognitive load
 ====
 
 == Psychology WAT?
@@ -247,57 +246,156 @@ image::21-design-of-everyday-things-v2.jpg[background]
 * Take a book from totally different world
 --
 
-[.take-away]
-== 1^st^ Rule of thumb
-
-*Don't make me think*
+== Let's jump back to SOLID
 
 [NOTE.speaker]
 ====
-* people don’t like to puzzle over how to do things
-* there is enough of thinking in the business domain
-** *the inherent complexity*
-* don't make it even more complex
-** let me conserve more energy for the creative problems I have
+* This appears to be kind of a baseline
+* Still valid, still covered by many
 ====
 
-[.take-away]
-== 2^nd^ Rule of thumb
+[%notitle]
+== SOLID
 
-{zwsp}
-
-*A bit of empathy never killed anybody*
+[%step]
+* Single responsibility principle
+* Open/closed principle
+* Liskov substitution principle
+* Interface segregation principle
+* Dependency inversion principle
 
 [NOTE.speaker]
 ====
-* What you write is of a huge importance to others
-** to help satisfy human needs - there is human on the other side
-* smaller cost of understanding and analysis upfront
-** less non-important elements require our immediate attention
+* a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)
+* software entities … should be open for extension, but closed for modification.
+* objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.” See also design by contract.
+* many client-specific interfaces are better than one general-purpose interface.
+* one should “depend upon abstractions, [not] concretions.
+====
+
+[.simple-code]
+== !
+
+* Single responsibility principle
+* Open/closed principle
+* Liskov substitution principle
+* Interface segregation principle
+* Dependency inversion principle
+
+[NOTE.speaker]
+====
+As Dan North recently put it
+====
+
+== Why this whole clean code thing, anyway?
+
+[NOTE.speaker]
+====
+* Ani nie SOLID
+* Jakieś zdroworozsądkowe reguły
+* Po co?
+** Może jest to odpowiedni komunikat do ludzi na odpowiednim poziomie
+** Czasem jest tak że taki mem wchodzi gładko i SOLID dziaramy na przedramieniu
+** Czasem lepiej wchodzi jakaś kognitywistyczna podstawa tych zasad
+** A czasem dochodzimy po prostu do write simple code
+* Może do różnych ludzi te same rzeczy trzeba mówić w różny sposób
+====
+
+[.cpt-obvious%notitle]
+== Thank you Cpt. Obvious
+
+image::http://www.stanleycolors.com/wp-content/uploads/2012/05/CO_Flying.gif[background]
+
+[NOTE.speaker]
+====
+* Fajnie jak ktoś to powiedział - ale okazuje się że dla często nie jest to takie oczywiste
+====
+
+== There is a model...
+
+[NOTE.speaker]
+====
+* All models are wrong by some are useful
+* Situationa leadership opracowany przez Blanchard'a w latach 70
+* Four different leadershit styles
+** Telling
+** Selling
+** Participating
+** Delegating
+====
+
+== !
+
+image::https://files.ctctcdn.com/dcd294e0401/46a49bc7-ef77-44d5-9588-6121f52442d6.png[role="no-shadow"]
+
+[NOTE.speaker]
+====
+* Entuzjastyczny debiutant
+** Powiedz co zrobić, pokaż jak zrobić, przećwicz aby się upewnić
+* Rozczarowany adapt
+** Otwartość na sugestie
+* Wątpiący praktyk
+** Dyskusja w celu wypracowania optymalnego rozwiązania
+* Samodzileny ekspert
+** Go and figure out yourself
 ====
 
 
-[.take-away]
-== Rules of thumb
 
-*Don't make me think*
 
-*A bit of empathy never killed anybody*
+
+// [.take-away]
+// == 1^st^ Rule of thumb
+//
+// *Don't make me think*
+//
+// [NOTE.speaker]
+// ====
+// * people don’t like to puzzle over how to do things
+// * there is enough of thinking in the business domain
+// ** *the inherent complexity*
+// * don't make it even more complex
+// ** let me conserve more energy for the creative problems I have
+// ====
+//
+// [.take-away]
+// == 2^nd^ Rule of thumb
+//
+// {zwsp}
+//
+// *A bit of empathy never killed anybody*
+//
+// [NOTE.speaker]
+// ====
+// * What you write is of a huge importance to others
+// ** to help satisfy human needs - there is human on the other side
+// * smaller cost of understanding and analysis upfront
+// ** less non-important elements require our immediate attention
+// ====
+//
+//
+// [.take-away]
+// == Rules of thumb
+//
+// *Don't make me think*
+//
+// *A bit of empathy never killed anybody*
 
 
 == Questions?
 
-image::http://data.whicdn.com/images/63807627/large.gif[background]
+image::https://media.giphy.com/media/hKW0FFvpVSvmM/giphy.gif[background]
 
 == Thank you!
 
-image::https://media.giphy.com/media/Puc4FZWExJc0E/giphy.gif[background]
+[.links#links%notitle]
+== Thank you!
 
-== Links and other goodies
+image::http://poznan.travel/uploaded/File/kozio%C5%82ki.jpg[background]
 
 ----
 PDF slides:
-  https://speakerdeck.com/kubamarchwicki/reverse-engineering-the-clean-code-vdb16
+  https://speakerdeck.com/kubamarchwicki/reverse-engineering-the-clean-code-att
 
 Slides source + links:
   https://github.com/kubamarchwicki/reverse-clean-code

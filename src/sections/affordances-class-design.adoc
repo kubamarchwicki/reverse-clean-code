@@ -49,7 +49,9 @@ Let's start basics.
 
 [quote, Glenn Vanderburg, http://vanderburg.org/blog/2011/01/31/cohesion.html]
 ____
-Things that are cohesive (...) naturally stick to each other because they are of like kind, or because they fit so well together (...) in a mutual relationship.
+Things that are cohesive (...) naturally stick +
+to each other because they are of like kind, +
+or because they fit so well together (...) in a mutual relationship.
 
 The pieces (...) seem to be related, they seem to belong together, and it would feel somewhat unnatural (it would result in tight coupling!) to pull them apart
 ____
@@ -59,9 +61,11 @@ ____
 
 [quote, Glenn Vanderburg, http://vanderburg.org/blog/2011/01/31/cohesion.html]
 ____
-Things that are cohesive (...) *naturally stick* to each other because they are of *like kind*, or because they *fit so well together* (...) in a mutual relationship.
+Things that are cohesive (...) pass:[<b><u>naturally stick</u></b>] +
+to each other because they are of pass:[<b><u>like kind</u></b>], +
+or because they pass:[<b><u>fit so well together</u></b>] (...) in a mutual relationship.
 
-The pieces (...) *seem to be* related, they seem to belong together, and it would *feel somewhat unnatural* (it would result in tight coupling!) to pull them apart
+The pieces (...) pass:[<b><u>seem to be</u></b>] related, they seem to belong together, and it would pass:[<b><u>feel somewhat unnatural</u></b>] (it would result in tight coupling!) pass:[<b><u>to pull them apart</u></b>]
 ____
 
 [NOTE.speaker]

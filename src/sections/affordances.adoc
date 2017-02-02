@@ -132,6 +132,7 @@ image::24-android1a.png[background]
 
 image::24-android2a.png[background]
 
+[%notitle]
 === Back to code
 
 [source, java]
@@ -221,3 +222,7 @@ Whenever I talk about it there are some questions *but how?*
 ====
 * but let me share some experience with you
 ====
+
+ifdef::aditional-heuristics[]
+include::affordances-class-design.adoc[leveloffset=+1]
+endif::[]

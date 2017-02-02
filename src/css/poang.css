@@ -47,11 +47,36 @@ section.heuristics.fail::before {
 
 /* Footer */
 div.slide-background:not([data-background-hash])::after {
-  content: "#geecon ~ @kubem ~ http://jakub.marchwicki.pl";
+  content: "@kubem ~ http://jakub.marchwicki.pl";
 	font-size: 20px !important;
 	position: absolute !important;
 	right: 10px;
 	bottom: 10px;
+}
+
+.slide-background.cpt-obvious {
+	background-position: center !important;
+}
+
+/* write-simple-code */
+.slide-background.simple-code {
+  background-color: white;
+}
+
+
+section.simple-code::before {
+	content: "WRITE SIMPLE CODE";
+	/*border: 13px solid #557527 !important;*/
+	padding: 15px;
+	border-radius: 25px;
+	color: #73AD21;
+	font-size: 2em;
+	top: 150px;
+	right: 250px;
+	transform: rotate(20deg);
+	position: absolute;
+  font-family: fantasy;
+	font-weight: bold;
 }
 
 /* take away */
@@ -95,6 +120,11 @@ section.take-away strong {
   margin-bottom: 35px;
   background-color: white;
   padding: 10px;
+}
+
+.slide-background.links {
+  background-color: blue;
+	opacity: 0.4 !important;
 }
 
 #links pre,
@@ -442,7 +472,7 @@ table td.halign-center {
 }
 
 .reveal section.no-shadow * {
-    box-shadow: 0 0 0;
+    box-shadow: 0 0 0 !important;
 }
 
 .reveal section img {

@@ -161,7 +161,9 @@ There are many others which might be also applicable to programming
 Let's have a look
 ====
 
+ifdef::aditional-heuristics[]
 include::ux-heuristics-nielsen.adoc[leveloffset=+1]
+endif::[]
 
 === Why heuristics?
 
