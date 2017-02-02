@@ -86,9 +86,17 @@ asciidoctor {
 
 task generatePdf(type:JavaExec) {
   dependsOn asciidoctor
+
+  def slidesFile = 'slides'
+  if (project.hasProperty('file')) {
+    slidesFile = project.getProperty('file')
+  }
+
   main = 'me.champeau.deck2pdf.Main'
-  workingDir = file("$buildDir/asciidoc/")
-  args = ["$workingDir/revealjs/slides.html","$workingDir/pdf/${project.name}.pdf", '--profile=revealjs', '--width=968', '--height=547']
+  workingDir = file("${buildDir}/asciidoc/")
+  args = ["${workingDir}/revealjs/${slidesFile}.html",
+    "${workingDir}/pdf/${project.name}-${slidesFile}.pdf",
+    '--profile=revealjs', '--width=968', '--height=547']
   classpath = configurations.pdf
 
   doFirst {
